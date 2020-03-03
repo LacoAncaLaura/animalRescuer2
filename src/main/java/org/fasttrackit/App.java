@@ -16,10 +16,11 @@ public class App
         animalReference.name = "Lucky";
         animalReference.age = 1;
         animalReference.bread = "GermanShepherd";
-        animalReference.health = 10;
-        animalReference.mood = 10;
-        animalReference.hunger = 8;
-        animalReference.ill = true;
+        animalReference.healthLevel = 10;
+        animalReference.moodLevel = 10;
+        animalReference.hungerLevel = 8;
+        animalReference.illness = true;
+        animalReference.favoritActivity = "run";
 
 //        animalReference.friends = new Friends();
 //        animalReference.friends.name = "Freya";
@@ -32,10 +33,12 @@ public class App
         System.out.println("Properties of" + animalReference.name);
         System.out.println("age:" + animalReference.age);
         System.out.println("bread:" + animalReference.bread);
-        System.out.println("health:" + animalReference.health);
-        System.out.println("mood:" + animalReference.mood);
-        System.out.println("hunger:" + animalReference.hunger);
-        System.out.println("ill:" + animalReference.ill);
+        System.out.println("healthLevel:" + animalReference.healthLevel);
+        System.out.println("moodLevel:" + animalReference.moodLevel);
+        System.out.println("hungerLevel:" + animalReference.hungerLevel);
+        System.out.println("illness" + animalReference.illness);
+        System.out.println("favoritActivity" + animalReference.favoritActivity);
+
 
 
         Adopter adopterReference = new Adopter();
@@ -44,7 +47,7 @@ public class App
         adopterReference.money = 100;
         adopterReference.age = 50;
         adopterReference.job = true;
-        adopterReference.gender = "man";
+        adopterReference.gender = "male";
 
         //concatenation
 
@@ -102,9 +105,9 @@ public class App
 
         vetReferences.name = "bioVet";
         vetReferences.appointment = new Date (2020, 04, 24 );
-        vetReferences.gender = true;
+        vetReferences.gender = "male";
         vetReferences.price = 150;
-        vetReferences.vetSpecialization= "dogs";
+        vetReferences.specialization= "dogs";
 
         // concatenation
 
@@ -112,7 +115,7 @@ public class App
         System.out.println("appointment:" + vetReferences.appointment);
         System.out.println("gender:" + vetReferences.gender);
         System.out.println("price:" + vetReferences.price);
-        System.out.println("vetSpecialization:" + vetReferences.vetSpecialization);
+        System.out.println("vetSpecialization:" + vetReferences.specialization);
 
         Toys toysReferences = new Toys();
 
@@ -132,7 +135,7 @@ public class App
         Friends friendsReferences = new Friends();
 
         friendsReferences.name = "Kyra";
-        friendsReferences.gender= false;
+        friendsReferences.gender= "female";
         friendsReferences.quantity= 1;
 
         //concatenation

@@ -6,6 +6,6 @@ public class Friends {
 
     String name;
     short quantity;
-    boolean gender;
+    String gender;
 
 }

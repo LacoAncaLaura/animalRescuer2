@@ -8,5 +8,10 @@ public class Game {
     String vet;
     String adoptor;
 
+    //has-a relationship / Aggregation
+
+
+
+
 
 }

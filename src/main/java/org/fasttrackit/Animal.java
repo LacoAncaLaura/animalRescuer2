@@ -6,18 +6,19 @@ public class Animal {
 
     String name;
     int age;
-    short health;
-    int hunger;
-    int mood;
+    short healthLevel;
+    int hungerLevel;
+    int moodLevel;
 
     String bread;
-    String activity;
-    boolean ill;
+    String favoritActivity;
+    boolean illness;
 
     //Aggregation
 
      Friends friends;
-     Adopter Food;
+     String favoritFood;
+
 
 
 

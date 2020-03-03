@@ -7,10 +7,10 @@ public class Vet {
     // instance variables
 
     String name;
-    String vetSpecialization;
+    String specialization;
     double price;
     Date appointment;
-    boolean gender;
+    String gender;
 
 
 
