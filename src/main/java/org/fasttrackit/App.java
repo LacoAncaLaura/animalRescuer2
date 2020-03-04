@@ -30,14 +30,14 @@ public class App
 
         //concatenation
 
-        System.out.println("Properties of" + animalReference.name);
+        System.out.println("Properties of:" + animalReference.name);
         System.out.println("age:" + animalReference.age);
         System.out.println("bread:" + animalReference.bread);
         System.out.println("healthLevel:" + animalReference.healthLevel);
         System.out.println("moodLevel:" + animalReference.moodLevel);
         System.out.println("hungerLevel:" + animalReference.hungerLevel);
-        System.out.println("illness" + animalReference.illness);
-        System.out.println("favoritActivity" + animalReference.favoritActivity);
+        System.out.println("illness:" + animalReference.illness);
+        System.out.println("favoritActivity:" + animalReference.favoritActivity);
 
 
 
@@ -85,19 +85,6 @@ public class App
 
         System.out.println("Properties of:" + activityReference.name);
         System.out.println("inOut:" + activityReference.inOut);
-
-
-        Game gameReferences = new Game();
-
-        gameReferences.adoptor = "Baby";
-        gameReferences.animal = "Lucky";
-        gameReferences.vet = "bioVet";
-
-        //concatenation
-
-        System.out.println("Properties of:" + gameReferences.adoptor);
-        System.out.println("animal:" + gameReferences.animal);
-        System.out.println("vet:" + gameReferences.vet);
 
 
         Vet vetReferences = new Vet();

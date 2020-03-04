@@ -6,7 +6,6 @@ import java.util.Date;
 
 public class Food {
     // instance variables
-
     String name;
     double price;
     Date expirationDate;
