@@ -119,17 +119,17 @@ public class App
         System.out.println("broken:" + toysReferences.broken);
         System.out.println("quantity:" + toysReferences.quantity);
 
-        Friends friendsReferences = new Friends();
+        FriendsForAnimal FriendsForAnimalReferences = new FriendsForAnimal();
 
-        friendsReferences.name = "Kyra";
-        friendsReferences.gender= "female";
-        friendsReferences.quantity= 1;
+        FriendsForAnimalReferences.name = "Kyra";
+        FriendsForAnimalReferences.gender= "female";
+        FriendsForAnimalReferences.quantity= 1;
 
         //concatenation
 
-        System.out.println("Properties of:" + friendsReferences.name);
-        System.out.println("gender:" + friendsReferences.gender);
-        System.out.println("quantity:" + friendsReferences.quantity);
+        System.out.println("Properties of:" + FriendsForAnimalReferences.name);
+        System.out.println("gender:" + FriendsForAnimalReferences.gender);
+        System.out.println("quantity:" + FriendsForAnimalReferences.quantity);
 
 
 

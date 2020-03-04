@@ -12,7 +12,7 @@ public class Animal {
     String favoritActivity;
     boolean illness;
     //Aggregation
-     Friends friends;
+     FriendsForAnimal friends;
      String favoritFood;
 
 

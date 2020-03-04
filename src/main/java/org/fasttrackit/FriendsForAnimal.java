@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class Friends {
+public class FriendsForAnimal {
 
     //instance variable
     String name;
