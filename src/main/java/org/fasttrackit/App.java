@@ -15,7 +15,7 @@ public class App
 
         animalReference.name = "Lucky";
         animalReference.age = 1;
-        animalReference.bread = "GermanShepherd";
+        animalReference.breed = "GermanShepherd";
         animalReference.healthLevel = 10;
         animalReference.moodLevel = 10;
         animalReference.hungerLevel = 8;
@@ -32,7 +32,7 @@ public class App
 
         System.out.println("Properties of:" + animalReference.name);
         System.out.println("age:" + animalReference.age);
-        System.out.println("bread:" + animalReference.bread);
+        System.out.println("breed:" + animalReference.bread);
         System.out.println("healthLevel:" + animalReference.healthLevel);
         System.out.println("moodLevel:" + animalReference.moodLevel);
         System.out.println("hungerLevel:" + animalReference.hungerLevel);
