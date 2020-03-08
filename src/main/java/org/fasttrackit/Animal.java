@@ -8,7 +8,7 @@ public class Animal {
     short healthLevel;
     int hungerLevel;
     int moodLevel;
-    String bread;
+    String breed;
     String favoritActivity;
     boolean illness;
     //Aggregation
