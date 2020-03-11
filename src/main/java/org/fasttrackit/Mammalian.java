@@ -1,29 +1,17 @@
 package org.fasttrackit;
 
-public class Animal {
+public class Mammalian {
 
-   // instance variables
+    // instance variables
     String name;
     int age;
-    short healthLevel;
+    int healthLevel;
     int hungerLevel;
     int moodLevel;
-    String bread;
+    String breed;
     String favoritActivity;
     boolean illness;
     //Aggregation
-     FriendsForAnimal friends;
-     String favoritFood;
-
-
-
-
-
-
-
-
-
-
-
-
+    FriendsForAnimal friends;
+    String favoritFood;
 }

@@ -6,7 +6,7 @@ public class Game {
     //has-a relationship / Aggregation
     Vet vet;
     Adopter adopter;
-    Animal animal;
+    Pet pet;
 
 
 

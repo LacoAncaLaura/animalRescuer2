@@ -11,7 +11,7 @@ public class Food {
     Date expirationDate;
     boolean availability;
     String color;
-    short quantity;
+    int quantity;
 
 
 

@@ -11,33 +11,36 @@ public class App
     public static void main( String[] args ) {
         System.out.println("Welcome to the Animal World!");
 
-        Animal animalReference = new Animal();
+        Pet petReference = new Pet();
 
-        animalReference.name = "Lucky";
-        animalReference.age = 1;
-        animalReference.bread = "GermanShepherd";
-        animalReference.healthLevel = 10;
-        animalReference.moodLevel = 10;
-        animalReference.hungerLevel = 8;
-        animalReference.illness = true;
-        animalReference.favoritActivity = "run";
+        petReference.name = "Lucky";
+        petReference.age = 1;
+        petReference.breed = "GermanShepherd";
+        petReference.healthLevel = 10;
+        petReference.moodLevel = 10;
+        petReference.hungerLevel = 8;
+        petReference.illness = true;
+        petReference.favoritActivity = "run";
+        petReference.priceTag = 199.99;
 
-//        animalReference.friends = new Friends();
-//        animalReference.friends.name = "Freya";
-//        animalReference.adoptor = "Baby";
+
+//        petReference.friends = new Friends();
+//        petReference.friends.name = "Freya";
+//        petReference.adoptor = "Baby";
 
 
 
         //concatenation
 
-        System.out.println("Properties of:" + animalReference.name);
-        System.out.println("age:" + animalReference.age);
-        System.out.println("bread:" + animalReference.bread);
-        System.out.println("healthLevel:" + animalReference.healthLevel);
-        System.out.println("moodLevel:" + animalReference.moodLevel);
-        System.out.println("hungerLevel:" + animalReference.hungerLevel);
-        System.out.println("illness:" + animalReference.illness);
-        System.out.println("favoritActivity:" + animalReference.favoritActivity);
+        System.out.println("Properties of:" + petReference.name);
+        System.out.println("age:" + petReference.age);
+        System.out.println("breed:" + petReference.breed);
+        System.out.println("healthLevel:" + petReference.healthLevel);
+        System.out.println("moodLevel:" + petReference.moodLevel);
+        System.out.println("hungerLevel:" + petReference.hungerLevel);
+        System.out.println("illness:" + petReference.illness);
+        System.out.println("favoritActivity:" + petReference.favoritActivity);
+        System.out.println("priceTag: " + petReference.priceTag);
 
 
 
@@ -64,6 +67,7 @@ public class App
         foodReference.color = "Brown";
         foodReference.expirationDate = new Date(2026 , 12 , 31);
         foodReference.quantity = 10;
+        foodReference.price = 100;
 
 
         // concatenation
@@ -73,6 +77,7 @@ public class App
         System.out.println("color:" + foodReference.color);
         System.out.println("expirationDate:" + foodReference.expirationDate);
         System.out.println("quantity:" + foodReference.quantity);
+        System.out.println("price:" + foodReference.price);
 
 
 

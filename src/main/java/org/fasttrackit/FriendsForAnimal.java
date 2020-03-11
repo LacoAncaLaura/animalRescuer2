@@ -4,7 +4,7 @@ public class FriendsForAnimal {
 
     //instance variable
     String name;
-    short quantity;
+    int quantity;
     String gender;
 
 }
