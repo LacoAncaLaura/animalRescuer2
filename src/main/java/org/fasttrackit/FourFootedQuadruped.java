@@ -6,4 +6,5 @@ public class FourFootedQuadruped extends Mammalian {
 
     boolean hairy;
     int legs;
+
 }
