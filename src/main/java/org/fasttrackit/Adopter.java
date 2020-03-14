@@ -9,6 +9,14 @@ public class Adopter {
     boolean job;
     String gender;
 
+    public void feeding(Animal animal, Food quantityInGrams){
+
+       System.out.println( name + "just gave some" );
+
+
+
+    }
+
 
 
 

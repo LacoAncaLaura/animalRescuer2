@@ -11,42 +11,42 @@ public class App
     public static void main( String[] args ) {
         System.out.println("Welcome to the Animal World!");
 
-        Pet petReference = new Pet();
+        Animal animalReference = new Animal();
 
-        petReference.name = "Lucky";
-        petReference.age = 1;
-        petReference.breed = "GermanShepherd";
-        petReference.healthLevel = 10;
-        petReference.moodLevel = 10;
-        petReference.hungerLevel = 8;
-        petReference.illness = true;
-        petReference.favoritActivity = "run";
-        petReference.priceTag = 199.99;
+        animalReference.name = "Lucky";
+        animalReference.age = 1;
+        animalReference.breed = "GermanShepherd";
+        animalReference.healthLevel = 10;
+        animalReference.moodLevel = 10;
+        animalReference.hungerLevel = 8;
+        animalReference.illness = true;
+        animalReference.favoritActivity = "run";
 
 
-//        petReference.friends = new Friends();
-//        petReference.friends.name = "Freya";
-//        petReference.adoptor = "Baby";
+
+//        animalReference.friends = new Friends();
+//        animalReference.friends.name = "Freya";
+//        animalReference.adoptor = "Baby";
 
 
 
         //concatenation
 
-        System.out.println("Properties of:" + petReference.name);
-        System.out.println("age:" + petReference.age);
-        System.out.println("breed:" + petReference.breed);
-        System.out.println("healthLevel:" + petReference.healthLevel);
-        System.out.println("moodLevel:" + petReference.moodLevel);
-        System.out.println("hungerLevel:" + petReference.hungerLevel);
-        System.out.println("illness:" + petReference.illness);
-        System.out.println("favoritActivity:" + petReference.favoritActivity);
-        System.out.println("priceTag: " + petReference.priceTag);
+        System.out.println("Properties of:" + animalReference.name);
+        System.out.println("age:" + animalReference.age);
+        System.out.println("breed:" + animalReference.breed);
+        System.out.println("healthLevel:" + animalReference.healthLevel);
+        System.out.println("moodLevel:" + animalReference.moodLevel);
+        System.out.println("hungerLevel:" + animalReference.hungerLevel);
+        System.out.println("illness:" + animalReference.illness);
+        System.out.println("favoritActivity:" + animalReference.favoritActivity);
+
 
 
 
         Adopter adopterReference = new Adopter();
 
-        adopterReference.name = "Baby";
+        adopterReference.name = "Cosmin";
         adopterReference.money = 100;
         adopterReference.age = 50;
         adopterReference.job = true;
@@ -62,7 +62,7 @@ public class App
 
         Food foodReference = new Food();
 
-        foodReference.name = "Carne";
+        foodReference.name = "TasteOfTheWild";
         foodReference.availability = true;
         foodReference.color = "Brown";
         foodReference.expirationDate = new Date(2026 , 12 , 31);
