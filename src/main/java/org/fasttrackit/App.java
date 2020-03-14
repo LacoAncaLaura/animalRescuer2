@@ -46,6 +46,8 @@ public class App
 
         Adopter adopterReference = new Adopter();
 
+
+
         adopterReference.name = "Cosmin";
         adopterReference.money = 100;
         adopterReference.age = 50;
@@ -135,6 +137,11 @@ public class App
         System.out.println("Properties of:" + FriendsForAnimalReferences.name);
         System.out.println("gender:" + FriendsForAnimalReferences.gender);
         System.out.println("quantity:" + FriendsForAnimalReferences.quantity);
+
+        adopterReference.feeding(animalReference,foodReference);
+        System.out.println( adopterReference.name  + "just gave some"  +  foodReference.name +  "food to" +  animalReference.name );
+
+
 
 
 
