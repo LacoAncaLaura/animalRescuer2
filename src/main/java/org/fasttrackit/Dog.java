@@ -5,7 +5,7 @@ package org.fasttrackit;
 public class Dog extends Animal {
 
     boolean bite;
-    int trainingleasons;
+    int trainingLessons;
     int toys;
 
 }

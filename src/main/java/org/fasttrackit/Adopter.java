@@ -9,14 +9,10 @@ public class Adopter {
     boolean job;
     String gender;
 
-   public void feeding(Animal animalReference, Food quantityInGrams) {
-
-    {animalReference.hungerLevel -=1;
-    }
+   public void feeding(Animal animal,Food quantityInGrams){
+      animal.hungerLevel -=1;
 
 
 
-
-
-}
+   }
 }

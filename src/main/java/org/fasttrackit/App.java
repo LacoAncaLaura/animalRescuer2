@@ -8,7 +8,9 @@ import java.util.Date;
  */
 public class App 
 {
-    public static void main( String[] args ) {
+    private static Object Animal;
+
+    public static void main(String[] args ) {
         System.out.println("Welcome to the Animal World!");
 
         Animal animalReference = new Animal();
@@ -19,7 +21,7 @@ public class App
         animalReference.healthLevel = 10;
         animalReference.moodLevel = 10;
         animalReference.hungerLevel = 8;
-        animalReference.illness = true;
+        animalReference.illness = false;
         animalReference.favoritActivity = "run";
 
 
