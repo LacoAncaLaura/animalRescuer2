@@ -142,7 +142,7 @@ public class App
 
 
         adopterReference.feeding(animalReference,foodReference);
-        activityReference.playing(animalReference, adopterReference);
+        adopterReference.playing(animalReference, activityReference);
 
 
 

@@ -21,22 +21,29 @@ public class Adopter {
         }
         System.out.println(" Hunger level before feeding: " + animal.hungerLevel);
 
+        animal.favoriteFood+=1;
         animal.hungerLevel -= 6;
 
         System.out.println(name + " just gave some " + food.name + " food to " + animal.name);
 
         System.out.println(" Hunger level after feeding: " + animal.hungerLevel);
     }
-   // public void playing(Animal animal , Activity activity) {
+    public void playing(Animal animal , Activity activity) {
+        if (activity.name.equals(animal.favoritActivity)){
+            animal.moodLevel+=3;
+        }
+        else{
+            animal.moodLevel-=5;
+        }
 
-//        System.out.println(" Mood level before playing: " + animal.moodLevel);
-//
-//        animal.moodLevel += 5;
-//
-//        System.out.println(name + " just played " + activity.name + " with " + animal.name);
-//
-//        System.out.println(" Mood level after playing: " + animal.moodLevel);
-    }
+        System.out.println(" Mood level before playing: " + animal.moodLevel);
+
+        animal.moodLevel += 5;
+
+        System.out.println(name + " just played " + activity.name + " with " + animal.name);
+
+        System.out.println(" Mood level after playing: " + animal.moodLevel);
+    }}
 
 
 
