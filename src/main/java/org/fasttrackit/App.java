@@ -140,8 +140,9 @@ public class App
         System.out.println("gender:" + FriendsForAnimalReferences.gender);
         System.out.println("quantity:" + FriendsForAnimalReferences.quantity);
 
+
         adopterReference.feeding(animalReference,foodReference);
-        System.out.println( adopterReference.name  + "just gave some"  +  foodReference.name +  "food to" +  animalReference.name );
+        activityReference.playing(animalReference,adopterReference);
 
 
 
