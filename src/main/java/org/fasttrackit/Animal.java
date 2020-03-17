@@ -14,7 +14,7 @@ public class Animal  {
     boolean illness;
     //Aggregation
     FriendsForAnimal friends;
-    String favoritFood;
+    String favoriteFood;
     int feetLegs;
     boolean fur;
 

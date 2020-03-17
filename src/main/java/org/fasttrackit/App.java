@@ -28,7 +28,7 @@ public class App
 
 //        animalReference.friends = new Friends();
 //        animalReference.friends.name = "Freya";
-//        animalReference.adoptor = "Baby";
+//        animalReference.adopter = "Baby";
 
 
 
@@ -41,7 +41,7 @@ public class App
         System.out.println("moodLevel:" + animalReference.moodLevel);
         System.out.println("hungerLevel:" + animalReference.hungerLevel);
         System.out.println("illness:" + animalReference.illness);
-        System.out.println("favoritActivity:" + animalReference.favoritActivity);
+        System.out.println("favoriteActivity:" + animalReference.favoritActivity);
 
 
 
@@ -142,7 +142,7 @@ public class App
 
 
         adopterReference.feeding(animalReference,foodReference);
-        activityReference.playing(animalReference,adopterReference);
+        activityReference.playing(animalReference, adopterReference);
 
 
 
