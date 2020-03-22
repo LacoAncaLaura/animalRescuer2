@@ -10,7 +10,7 @@ public class Animal  {
     int hungerLevel;
     int moodLevel;
     String breed;
-    String favoritActivity;
+    String favoriteActivity;
     boolean illness;
     //Aggregation
     FriendsForAnimal friends;
@@ -18,16 +18,10 @@ public class Animal  {
     int feetLegs;
     boolean fur;
 
-
-
-
-
-
-
-
-
-
-
-
-
+    public Animal(String name, int healthLevel, int hungerLevel, int moodLevel) {
+        this.name = name;
+        this.healthLevel = healthLevel;
+        this.hungerLevel = hungerLevel;
+        this.moodLevel = moodLevel;
+    }
 }

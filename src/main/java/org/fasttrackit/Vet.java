@@ -11,6 +11,11 @@ public class Vet {
     Date appointment;
     String gender;
 
+    public Vet(String name, String specialization){
+        this.name = name;
+        this.specialization = specialization;
+    }
+
 
 
 

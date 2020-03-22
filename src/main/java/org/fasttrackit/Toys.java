@@ -7,5 +7,8 @@ public class Toys {
     int quantity;
     boolean broken;
     String color;
+    public Toys(String name){
+        this.name = name;
+    }
 
 }

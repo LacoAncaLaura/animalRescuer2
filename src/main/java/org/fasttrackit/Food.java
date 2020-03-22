@@ -13,7 +13,7 @@ public class Food {
     String color;
     int quantity;
 
-
-
+    public Food(String name){
+    this.name = name;}
 
 }

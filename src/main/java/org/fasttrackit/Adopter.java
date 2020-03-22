@@ -10,7 +10,10 @@ public class Adopter {
     int age;
     boolean job;
     String gender;
-
+public Adopter(String name,Double money){
+    this.name = name;
+    this.money = money;
+}
 
     public void feeding(Animal animal,Food food){
         if (food.name.equals(animal.favoriteFood)){
@@ -29,7 +32,7 @@ public class Adopter {
         System.out.println(" Hunger level after feeding: " + animal.hungerLevel);
     }
     public void playing(Animal animal , Activity activity) {
-        if (activity.name.equals(animal.favoritActivity)){
+        if (activity.name.equals(animal.favoriteActivity)){
             animal.moodLevel+=3;
         }
         else{

@@ -7,4 +7,8 @@ public class FriendsForAnimal {
     int quantity;
     String gender;
 
+    public FriendsForAnimal(String name) {
+        this.name = name;
+    }
+
 }

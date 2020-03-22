@@ -13,7 +13,7 @@ public class App
     public static void main(String[] args ) {
         System.out.println("Welcome to the Animal World!");
 
-        Animal animalReference = new Animal();
+        Animal animalReference = new Animal( "Lucky" , 10 , 8 , 10 );
 
         animalReference.name = "Lucky";
         animalReference.age = 1;
@@ -22,7 +22,7 @@ public class App
         animalReference.moodLevel = 10;
         animalReference.hungerLevel = 8;
         animalReference.illness = false;
-        animalReference.favoritActivity = "run";
+        animalReference.favoriteActivity = "run";
 
 
 
@@ -41,17 +41,17 @@ public class App
         System.out.println("moodLevel:" + animalReference.moodLevel);
         System.out.println("hungerLevel:" + animalReference.hungerLevel);
         System.out.println("illness:" + animalReference.illness);
-        System.out.println("favoriteActivity:" + animalReference.favoritActivity);
+        System.out.println("favoriteActivity:" + animalReference.favoriteActivity);
 
 
 
 
-        Adopter adopterReference = new Adopter();
+        Adopter adopterReference = new Adopter("Cosmin" , 100.99);
 
 
 
         adopterReference.name = "Cosmin";
-        adopterReference.money = 100;
+        adopterReference.money = 100.99;
         adopterReference.age = 50;
         adopterReference.job = true;
         adopterReference.gender = "male";
@@ -64,7 +64,7 @@ public class App
         System.out.println("job:" + adopterReference.job);
         System.out.println("gender:" + adopterReference.gender);
 
-        Food foodReference = new Food();
+        Food foodReference = new Food("TasteOfTheWild");
 
         foodReference.name = "TasteOfTheWild";
         foodReference.availability = true;
@@ -85,7 +85,7 @@ public class App
 
 
 
-        Activity activityReference = new Activity();
+        Activity activityReference = new Activity("Fetch");
 
         activityReference.name = "Fetch";
         activityReference.inOut = true;
@@ -96,7 +96,7 @@ public class App
         System.out.println("inOut:" + activityReference.inOut);
 
 
-        Vet vetReferences = new Vet();
+        Vet vetReferences = new Vet("bioVet" , "dogs");
 
 
         vetReferences.name = "bioVet";
@@ -113,7 +113,7 @@ public class App
         System.out.println("price:" + vetReferences.price);
         System.out.println("vetSpecialization:" + vetReferences.specialization);
 
-        Toys toysReferences = new Toys();
+        Toys toysReferences = new Toys("Ball");
 
         toysReferences.name = "Ball";
         toysReferences.color = "Green";
@@ -128,9 +128,9 @@ public class App
         System.out.println("broken:" + toysReferences.broken);
         System.out.println("quantity:" + toysReferences.quantity);
 
-        FriendsForAnimal FriendsForAnimalReferences = new FriendsForAnimal();
+        FriendsForAnimal FriendsForAnimalReferences = new FriendsForAnimal("Kira");
 
-        FriendsForAnimalReferences.name = "Kyra";
+        FriendsForAnimalReferences.name = "Kira";
         FriendsForAnimalReferences.gender= "female";
         FriendsForAnimalReferences.quantity= 1;
 
