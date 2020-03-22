@@ -11,4 +11,20 @@ public class Cat extends Animal {
         super(name , healthLevel , hungerLevel , moodLevel);
 
     }
+
+    public int getPurrs() {
+        return purrs;
+    }
+
+    public void setPurrs(int purrs) {
+        this.purrs = purrs;
+    }
+
+    public boolean isNoisy() {
+        return noisy;
+    }
+
+    public void setNoisy(boolean noisy) {
+        this.noisy = noisy;
+    }
 }
