@@ -30,10 +30,12 @@ public class Cat extends Animal {
 
     @Override
     public void feeling(Animal animal) {
-        System.out.println("If the Cat fed properly and her moodLevel which is: " + getMoodLevel() + "is higher then her hungerLevel which is:" + getHungerLevel());
+        System.out.println("If the Cat fed properly and her moodLevel,which is: " + getMoodLevel() + " ,is higher then her hungerLevel,which is: " + getHungerLevel());
         if (getHungerLevel() < getMoodLevel()){
+            System.out.println("Alice`s mood before feeding: " + getMoodLevel() + " and her hunger: " + getHungerLevel());
             setHungerLevel(getHungerLevel() -5);
             setMoodLevel(getMoodLevel() +3);
+            System.out.println("Alice`s mood after feeding: " + getMoodLevel() + " and her hunger: " + getHungerLevel());
             System.out.println("Then she purrs :) ");}
         else{
             System.out.println("Now she`ll be depressed and die shortly of sadness :( ");
