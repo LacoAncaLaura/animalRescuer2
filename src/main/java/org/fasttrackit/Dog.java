@@ -39,7 +39,7 @@ public class Dog extends Animal {
 
     @Override
     public void feeling(Animal animal)
-    {System.out.println("And if the dog fed properly and his mood,which is: " + getMoodLevel() + ",is higher then his hunger,which is: " + getHungerLevel());
+    {System.out.println("And if the dog is fed properly and his mood,which is: " + getMoodLevel() + ",is higher then his hunger,which is: " + getHungerLevel());
 
         if (getHungerLevel() > getMoodLevel()){
             System.out.println("George`s mood before feeding: " + getMoodLevel() + " and his hunger: " + getHungerLevel());
