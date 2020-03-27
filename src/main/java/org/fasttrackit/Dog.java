@@ -43,8 +43,8 @@ public class Dog extends Animal {
 
         if (getHungerLevel() > getMoodLevel()){
             System.out.println("George`s mood before feeding: " + getMoodLevel() + " and his hunger: " + getHungerLevel());
-            setHungerLevel(getHungerLevel() -1);
-            setMoodLevel(getMoodLevel() +1);
+            setHungerLevel(getHungerLevel() -10);
+            setMoodLevel(getMoodLevel() +18);
             System.out.println("George`s mood after feeding: " + getMoodLevel() + " and his hunger: " + getHungerLevel());
             System.out.println("Then he fawns :) ");}
         else{  System.out.println("Now he`ll be depressed and follow me everywhere and in the end,eat me :( ");}
