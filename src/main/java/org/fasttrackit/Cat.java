@@ -27,4 +27,15 @@ public class Cat extends Animal {
     public void setNoisy(boolean noisy) {
         this.noisy = noisy;
     }
-}
+
+    @Override
+    public void feeling(Animal animal) {
+        System.out.println("If the Cat fed properly and her moodLevel which is: " + getMoodLevel() + "is higher then her hungerLevel which is:" + getHungerLevel());
+        if (getHungerLevel() < getMoodLevel()){
+            setHungerLevel(getHungerLevel() -5);
+            setMoodLevel(getMoodLevel() +3);
+            System.out.println("Then she purrs :) ");}
+        else{
+            System.out.println("Now she`ll be depressed and die shortly of sadness :( ");
+    }
+}}

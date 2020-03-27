@@ -13,6 +13,7 @@ public class App
     public static void main(String[] args ) {
         System.out.println("Welcome to the Animal World!");
 
+
         Animal animalReference = new Animal( "Lucky" , 10 , 8 , 10 );
 
         animalReference.setName("Lucky");
@@ -23,7 +24,6 @@ public class App
         animalReference.setHungerLevel(8);
         animalReference.setIllness(false);
         animalReference.setFavoriteActivity("run");
-
 
 
 //        animalReference.friends = new Friends();
@@ -144,25 +144,15 @@ public class App
         adopterReference.feeding(animalReference,foodReference);
         adopterReference.playing(animalReference, activityReference);
 
+        animalReference.feeling(animalReference);
+
+        Cat cat = new Cat("Alice" , 12 , 6 , 8);
+        cat.feeling(animalReference);
+
+        Dog dog = new Dog("George" , 9 ,15,12,14);
+        dog.feeling(animalReference);
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }}
+        }}

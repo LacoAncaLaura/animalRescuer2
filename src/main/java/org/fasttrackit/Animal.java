@@ -1,7 +1,6 @@
 package org.fasttrackit;
 
 
-
 public class Animal  {
     // static variables/class variables
     static int totalAnimalCount;
@@ -126,5 +125,15 @@ public class Animal  {
     public void setFur(boolean fur) {
         this.fur = fur;
     }
+    public void feeling(Animal animal){
+        System.out.println(getName() + "`s mood before feeding: "  + moodLevel);
+       if (hungerLevel < moodLevel){
+           hungerLevel -=5;
+           moodLevel += 3;
+           System.out.println(getName() + "`s mood after feeding:" + moodLevel);
+           System.out.println(getName() + " is happy"); }
+       else{
+           System.out.println(getName() + " is not in a very good mood");
+       } }
 }
 

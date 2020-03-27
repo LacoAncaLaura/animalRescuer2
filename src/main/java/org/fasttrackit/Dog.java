@@ -36,4 +36,17 @@ public class Dog extends Animal {
     public void setToys(int toys) {
         this.toys = toys;
     }
+
+    @Override
+    public void feeling(Animal animal) {
+        System.out.println("And if the dog fed properly and his moodLevel which is: " + getMoodLevel());
+        System.out.println("Is higher then his hungerLevel which is:" + getHungerLevel());
+        if (getHungerLevel() < getMoodLevel()){
+            setHungerLevel(getHungerLevel() -4);
+            setMoodLevel(getMoodLevel() +10);
+            System.out.println("Then he fawns :) ");}
+        else{
+            System.out.println("Now he`ll be depressed and follow me everywhere and in the end,eat me :( ");
+        }
+    }
 }

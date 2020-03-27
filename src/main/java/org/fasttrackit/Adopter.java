@@ -10,7 +10,8 @@ public class Adopter {
     private int age;
     private boolean job;
     private String gender;
-public Adopter(String name,Double money){
+
+    public Adopter(String name,Double money){
     this.name = name;
     this.money = money;
 }
