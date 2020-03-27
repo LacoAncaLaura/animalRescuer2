@@ -149,7 +149,7 @@ public class App
         Cat cat = new Cat("Alice" , 12 , 6 , 8);
         cat.feeling(animalReference);
 
-        Dog dog = new Dog("George" , 9 ,15,12,14);
+        Dog dog = new Dog("George" , 9 ,10,12,14);
         dog.feeling(animalReference);
 
 

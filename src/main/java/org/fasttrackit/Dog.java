@@ -41,9 +41,9 @@ public class Dog extends Animal {
     public void feeling(Animal animal)
     {System.out.println("And if the dog is fed properly and his mood,which is: " + getMoodLevel() + ",is higher then his hunger,which is: " + getHungerLevel());
 
-        if (getHungerLevel() > getMoodLevel()){
+        if (getHungerLevel() < getMoodLevel()){
             System.out.println("George`s mood before feeding: " + getMoodLevel() + " and his hunger: " + getHungerLevel());
-            setHungerLevel(getHungerLevel() -10);
+            setHungerLevel(getHungerLevel() -9);
             setMoodLevel(getMoodLevel() +18);
             System.out.println("George`s mood after feeding: " + getMoodLevel() + " and his hunger: " + getHungerLevel());
             System.out.println("Then he fawns :) ");}
