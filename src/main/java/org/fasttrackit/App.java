@@ -153,6 +153,8 @@ public class App
         dog.feeling(animalReference);
 
 
+        Game game =new Game();
+        game.start();
 
 
         }}

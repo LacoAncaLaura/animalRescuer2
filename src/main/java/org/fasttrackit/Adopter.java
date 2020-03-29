@@ -1,7 +1,5 @@
 package org.fasttrackit;
 
-import javax.swing.*;
-
 public class Adopter {
 
  // instance variables
