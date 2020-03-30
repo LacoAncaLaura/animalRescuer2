@@ -37,7 +37,7 @@ public class Game {
     }
 
 
-//  private List foodList =new ArrayList<Food>();
+//  private List<Food> =new ArrayList<>();
 //        {foodList.add("TasteOfTheWild");
 //        foodList.add("Beef");
 //        foodList.add("Chicken");}
