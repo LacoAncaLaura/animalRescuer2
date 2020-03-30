@@ -30,6 +30,8 @@ public class App
 //        animalReference.friends.name = "Freya";
 //        animalReference.adopter = "Baby";
 
+        animalReference.feeling(animalReference);
+
 
 
         //concatenation
