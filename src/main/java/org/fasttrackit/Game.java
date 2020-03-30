@@ -23,6 +23,9 @@ public class Game {
     public void start() {
         System.out.println("It`s play time!");
 
+        int getPlayerCountFromUser = 1;
+        int playerCount = getPlayerCountFromUser;
+
         initFood();
         displayFood();
         Food selectedFood = getSelectedFoodFromUser();
@@ -30,11 +33,6 @@ public class Game {
         initActivity();
         displayActivities();
         Activity selectedActivities= getSelectedActivityFromUser();
-
-
-
-        int getPlayerCountFromUser = 1;
-        int playerCount = getPlayerCountFromUser;
 
     }
 
@@ -66,7 +64,7 @@ public class Game {
 
         foods[2]= food3;
     }
-    private Activity[]activities = new Activity[3];
+    private Activity[]activities = new Activity[4];
 
     private void initActivity(){
 
@@ -82,8 +80,8 @@ public class Game {
 
         activities[1]= activity2;
 
-        Activity activity3 = new Activity("training");
-        activity3.setName("training");
+        Activity activity3 = new Activity("Training");
+        activity3.setName("Training");
         activity3.setDurationInHours(3);
 
         activities[2]= activity3;
