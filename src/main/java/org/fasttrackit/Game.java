@@ -15,16 +15,19 @@ public class Game {
     Animal animal;
 
 
-    private Food[]foods = new Food[2];
+    private Food[]foods = new Food[3];
+
 
 
 
     public void start() {
         System.out.println("It`s play time!");
 
+        initFood();
         displayFood();
         Food selectedFood = getSelectedFoodFromUser();
 
+        initActivity();
         displayActivities();
         Activity selectedActivities= getSelectedActivityFromUser();
 
@@ -67,14 +70,14 @@ public class Game {
 
     private void initActivity(){
 
-        Activity activity1 = new Activity("run");
-        activity1.setName("run");
+        Activity activity1 = new Activity("Run");
+        activity1.setName("Run");
         activity1.setDurationInHours(1);
 
         activities[0]= activity1;
 
         Activity activity2 = new Activity("Play");
-        activity2.setName("play");
+        activity2.setName("Play");
         activity2.setDurationInHours(2);
 
         activities[1]= activity2;
