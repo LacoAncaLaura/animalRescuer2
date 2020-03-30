@@ -23,8 +23,7 @@ public class Game {
     public void start() {
         System.out.println("It`s play time!");
 
-        int getPlayerCountFromUser = 1;
-        int playerCount = getPlayerCountFromUser;
+       int countPlayers = getPlayerCountFromUser();
 
         initFood();
         displayFood();
