@@ -125,6 +125,7 @@ public class Animal  {
     public void setFur(boolean fur) {
         this.fur = fur;
     }
+
     public void feeling(Animal animal){
         System.out.println(getName() + "`s mood before feeding: "  + moodLevel);
        if (hungerLevel < moodLevel){
@@ -135,5 +136,23 @@ public class Animal  {
        else{
            System.out.println(getName() + " is not in a very good mood");
        } }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", healthLevel=" + healthLevel +
+                ", hungerLevel=" + hungerLevel +
+                ", moodLevel=" + moodLevel +
+                ", breed='" + breed + '\'' +
+                ", favoriteActivity='" + favoriteActivity + '\'' +
+                ", illness=" + illness +
+                ", friends=" + friends +
+                ", favoriteFood='" + favoriteFood + '\'' +
+                ", feetLegs=" + feetLegs +
+                ", fur=" + fur +
+                '}';
+    }
 }
 

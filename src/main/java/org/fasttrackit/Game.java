@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import javax.sound.midi.Soundbank;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,15 +17,23 @@ public class Game {
 
     private Food[]foods = new Food[2];
 
+
+
     public void start() {
         System.out.println("It`s play time!");
 
         displayFood();
+        Food selectedFood = getSelectedFoodFromUser();
+
+        displayActivities();
+        Activity selectedActivities= getSelectedActivityFromUser();
+
+
+
         int getPlayerCountFromUser = 1;
         int playerCount = getPlayerCountFromUser;
+
     }
-
-
 
 
 //  private List foodList =new ArrayList<Food>();
@@ -79,12 +89,32 @@ public class Game {
         System.out.println("Available Food: ");
         for (int i = 0; i < foods.length; i++){
             if (foods[i] != null){
-                System.out.println((i + 1) + foods[i].getName() + foods[i].getQuantity());
+                System.out.println((i + 1) +"." +  foods[i].getName() +"-" +  foods[i].getQuantity());
             }}
     }
+    public void displayActivities(){
+        System.out.println("Available Activities: ");
+        for (int i= 0; i< activities.length; i++){
+            if(activities[i] != null){
+                System.out.println((i + 1) +"." +  activities[i].getName() +"-" + activities[i].getDurationInHours());
+            }
+          }
+        }
     private int getPlayerCountFromUser(){
         System.out.println("Please enter number of players");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
-  }
+    private Food getSelectedFoodFromUser(){
+        System.out.println("Please select a type of food: ");
+        Scanner scanner = new Scanner(System.in);
+        int foodNumber = scanner.nextInt();
+        return foods[foodNumber - 1];
+    }
+    private Activity getSelectedActivityFromUser(){
+        System.out.println("Pleas select your favorite activity: ");
+        Scanner scanner = new Scanner(System.in);
+        int activitiesNumber = scanner.nextInt();
+        return activities[activitiesNumber - 1];
+    }
+    }
