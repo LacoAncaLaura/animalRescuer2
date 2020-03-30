@@ -154,10 +154,7 @@ public class App
         Dog dog = new Dog("George" , 9 ,10,12,14);
         dog.feeling(animalReference);
 
-
         Game game =new Game();
         game.start();
-
-
-
-        }}
+ }
+}
