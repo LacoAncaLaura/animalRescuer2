@@ -46,20 +46,17 @@ public class Game {
 
     private void initFood(){
 
-        Food food1 = new Food("food1");
-        food1.setName("TasteOfTheWild");
+        Food food1 = new Food("TasteOfTheWild");
         food1.setQuantity(150);
 
        foods[0]= food1;
 
-        Food food2 = new Food("food2");
-        food2.setName("Beef");
+        Food food2 = new Food("Beef");
         food2.setQuantity(200);
 
         foods[1]= food2;
 
-        Food food3 = new Food("food3");
-        food3.setName("Chicken");
+        Food food3 = new Food("Chicken");
         food3.setQuantity(250);
 
         foods[2]= food3;
@@ -69,19 +66,16 @@ public class Game {
     private void initActivity(){
 
         Activity activity1 = new Activity("Run");
-        activity1.setName("Run");
         activity1.setDurationInHours(1);
 
         activities[0]= activity1;
 
         Activity activity2 = new Activity("Play");
-        activity2.setName("Play");
         activity2.setDurationInHours(2);
 
         activities[1]= activity2;
 
         Activity activity3 = new Activity("Training");
-        activity3.setName("Training");
         activity3.setDurationInHours(3);
 
         activities[2]= activity3;
