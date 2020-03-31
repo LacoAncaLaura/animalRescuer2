@@ -36,10 +36,11 @@ public class Game {
     }
 
 
-//  private List<Food> =new ArrayList<>();
+  private List<Food>  foodList =new ArrayList<>();
 //        {foodList.add("TasteOfTheWild");
 //        foodList.add("Beef");
-//        foodList.add("Chicken");}
+//        foodList.add("Chicken");
+//        }
 
 
 
