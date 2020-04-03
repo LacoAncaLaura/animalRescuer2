@@ -14,16 +14,14 @@ public class Game {
     Adopter adopter;
     Animal animal;
 
-
-    private Food[]foods = new Food[3];
-
-
+    private List<Food> foodList = new ArrayList<>();
+    private Food[] foods = new Food[3];
 
 
     public void start() {
         System.out.println("It`s play time!");
 
-       int countPlayers = getPlayerCountFromUser();
+        int countPlayers = getPlayerCountFromUser();
 
         initFood();
         displayFood();
@@ -31,85 +29,94 @@ public class Game {
 
         initActivity();
         displayActivities();
-        Activity selectedActivities= getSelectedActivityFromUser();
+        Activity selectedActivities = getSelectedActivityFromUser();
 
     }
 
-
-  private List<Food>  foodList =new ArrayList<>();
-//        {foodList.add("TasteOfTheWild");
-//        foodList.add("Beef");
-//        foodList.add("Chicken");
-//        }
-
-
-
-    private void initFood(){
+    private void initFood() {
 
         Food food1 = new Food("TasteOfTheWild");
+        foodList.add(1, food1);
         food1.setQuantity(150);
-
-       foods[0]= food1;
+//
+//       foods[0]= food1;
+//       Index
 
         Food food2 = new Food("Beef");
+        foodList.add(2, food2);
         food2.setQuantity(200);
 
-        foods[1]= food2;
+
+//        foods[1]= food2;
 
         Food food3 = new Food("Chicken");
+        foodList.add(3, food3);
         food3.setQuantity(250);
 
-        foods[2]= food3;
+//        foods[2]= food3;
     }
-    private Activity[]activities = new Activity[4];
 
-    private void initActivity(){
+    private Activity[] activities = new Activity[4];
+
+    private void initActivity() {
 
         Activity activity1 = new Activity("Run");
         activity1.setDurationInHours(1);
 
-        activities[0]= activity1;
+        activities[0] = activity1;
 
         Activity activity2 = new Activity("Play");
         activity2.setDurationInHours(2);
 
-        activities[1]= activity2;
+        activities[1] = activity2;
 
         Activity activity3 = new Activity("Training");
         activity3.setDurationInHours(3);
 
-        activities[2]= activity3;
+        activities[2] = activity3;
     }
-    public void displayFood(){
-        System.out.println("Available Food: ");
-        for (int i = 0; i < foods.length; i++){
-            if (foods[i] != null){
-                System.out.println((i + 1) +"." +  foods[i].getName() +"-" +  foods[i].getQuantity());
-            }}
-    }
-    public void displayActivities(){
-        System.out.println("Available Activities: ");
-        for (int i= 0; i< activities.length; i++){
-            if(activities[i] != null){
-                System.out.println((i + 1) +"." +  activities[i].getName() +"-" + activities[i].getDurationInHours());
+
+    public void displayFood() {
+//        System.out.println("Available Food: ");
+//        for (Food food: foodList){
+//            food.getName();
+//            food.getQuantity();
+
+//        }
+        for (int i = 0; i < foods.length; i++) {
+            if (foods[i] != null) {
+                System.out.println((i + 1) + "." + foods[i].getName() + "-" + foods[i].getQuantity());
             }
-          }
         }
-    private int getPlayerCountFromUser(){
+    }
+
+
+    public void displayActivities() {
+        System.out.println("Available Activities: ");
+        for (int i = 0; i < activities.length; i++) {
+            if (activities[i] != null) {
+                System.out.println((i + 1) + "." + activities[i].getName() + "-" + activities[i].getDurationInHours());
+            }
+        }
+    }
+
+    private int getPlayerCountFromUser() {
         System.out.println("Please enter number of players");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
-    private Food getSelectedFoodFromUser(){
+
+    private  Food getSelectedFoodFromUser() {
         System.out.println("Please select a type of food: ");
         Scanner scanner = new Scanner(System.in);
         int foodNumber = scanner.nextInt();
         return foods[foodNumber - 1];
     }
-    private Activity getSelectedActivityFromUser(){
+
+    private Activity getSelectedActivityFromUser() {
         System.out.println("Pleas select your favorite activity: ");
         Scanner scanner = new Scanner(System.in);
         int activitiesNumber = scanner.nextInt();
         return activities[activitiesNumber - 1];
     }
-    }
+}
