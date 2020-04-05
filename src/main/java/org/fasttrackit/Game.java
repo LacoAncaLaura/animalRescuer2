@@ -1,7 +1,5 @@
 package org.fasttrackit;
 
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,15 +12,15 @@ public class Game {
     Adopter adopter;
     Animal animal;
 
-    private List<Food> foodList = new ArrayList<>();
+    //
+    private List<Adopter> users = new ArrayList<>();
     private Food[] foods = new Food[3];
 
 
     public void start() {
         System.out.println("It`s play time!");
 
-        int countPlayers = getPlayerCountFromUser();
-
+        initializePlayers();
         initFood();
         displayFood();
         Food selectedFood = getSelectedFoodFromUser();
@@ -32,28 +30,34 @@ public class Game {
         Activity selectedActivities = getSelectedActivityFromUser();
 
     }
+    private void initAnimal(){
+        System.out.println("Please select an animal: ");
+        Scanner scanner = new Scanner(System.in);
+
+
+    }
 
     private void initFood() {
 
         Food food1 = new Food("TasteOfTheWild");
-        foodList.add(1, food1);
+//        foodList.add(1,food1);
         food1.setQuantity(150);
 //
-//       foods[0]= food1;
+        foods[0] = food1;
 //       Index
 
         Food food2 = new Food("Beef");
-        foodList.add(2, food2);
+//        foodList.add(2, food2);
         food2.setQuantity(200);
 
 
-//        foods[1]= food2;
+        foods[1] = food2;
 
         Food food3 = new Food("Chicken");
-        foodList.add(3, food3);
+//        foodList.add(3, food3);
         food3.setQuantity(250);
 
-//        foods[2]= food3;
+        foods[2] = food3;
     }
 
     private Activity[] activities = new Activity[4];
@@ -77,11 +81,10 @@ public class Game {
     }
 
     public void displayFood() {
-//        System.out.println("Available Food: ");
+        System.out.println("Available Food: ");
 //        for (Food food: foodList){
 //            food.getName();
 //            food.getQuantity();
-
 //        }
         for (int i = 0; i < foods.length; i++) {
             if (foods[i] != null) {
@@ -101,12 +104,12 @@ public class Game {
     }
 
     private int getPlayerCountFromUser() {
-        System.out.println("Please enter number of players");
+        System.out.println("Please enter number of players: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
 
-    private  Food getSelectedFoodFromUser() {
+    private Food getSelectedFoodFromUser() {
         System.out.println("Please select a type of food: ");
         Scanner scanner = new Scanner(System.in);
         int foodNumber = scanner.nextInt();
@@ -119,4 +122,24 @@ public class Game {
         int activitiesNumber = scanner.nextInt();
         return activities[activitiesNumber - 1];
     }
-}
+    private void initializePlayers(){
+        int playerCount = getPlayerCountFromUser();
+        for ( int i = 0; i < playerCount ; i++){
+            System.out.println("That`s one adopter for an animal: " + (i+1));
+            String name = getUserName();
+            Adopter adopter = new Adopter(name,1655.5);
+            adopter.setName(name);
+            adopter.getGender();
+            adopter.isJob();
+            adopter.setAge(20);
+            adopter.getMoney();
+            users.add(adopter);
+        }
+    }
+    private String getUserName() {
+        System.out.println("Please enter your name: ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
+    }
+
