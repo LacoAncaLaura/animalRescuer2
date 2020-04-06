@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,15 +13,23 @@ public class Game {
     Adopter adopter;
     Animal animal;
 
-    //
+    private Animal[] abandonedAnimals = new Animal[2];
     private List<Adopter> users = new ArrayList<>();
     private Food[] foods = new Food[3];
+    private Animal selectedAnimal;
 
 
     public void start() {
         System.out.println("It`s play time!");
 
+
         initializePlayers();
+        initAnimal();
+        displayAnimal();
+        selectedAnimal = getSelectedAnimalFromUser();
+        System.out.println("You have selected a " + selectedAnimal.getName());
+        nameForAnimal();
+
         initFood();
         displayFood();
         Food selectedFood = getSelectedFoodFromUser();
@@ -30,11 +39,58 @@ public class Game {
         Activity selectedActivities = getSelectedActivityFromUser();
 
     }
-    private void initAnimal(){
+
+    private void initAnimal() {
         System.out.println("Please select an animal: ");
+        Animal abandonedAnimal1 = new Cat("Cat", 5, 10, 2);
+        abandonedAnimal1.setName("Cat");
+        abandonedAnimal1.setHungerLevel(10);
+        abandonedAnimal1.setHealthLevel(5);
+        abandonedAnimal1.setMoodLevel(2);
+
+        abandonedAnimals[0] = abandonedAnimal1;
+
+        Animal abandonedAnimal2 = new Dog("Dog", 5, 10, 2, 1);
+        abandonedAnimal2.setName("Dog");
+        abandonedAnimal2.setHealthLevel(5);
+        abandonedAnimal2.setHungerLevel(10);
+        abandonedAnimal2.setMoodLevel(2);
+
+        abandonedAnimals[1] = abandonedAnimal2;
+
+
+    }
+
+    private void displayAnimal() {
+        System.out.println("Abandoned animals: ");
+        for (int i = 0; i < abandonedAnimals.length; i++) {
+            if (abandonedAnimals[i] != null) ;
+            System.out.println((i + 1) + "." + abandonedAnimals[i].getName());
+        }
+
+    }
+
+    private Animal getSelectedAnimalFromUser() {
+        System.out.println("Please select an animal: ");
+
+        try {
+            Scanner scanner = new Scanner(System.in);
+            int abandonedAnimalsNumber = scanner.nextInt();
+            return abandonedAnimals[abandonedAnimalsNumber];
+        } catch (InputMismatchException e) {
+            throw new RuntimeException("You have entered an invalid value.Please try again.");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new RuntimeException("Wrong number entered.");
+        } finally {
+            System.out.println("Finally block always executed.");
+        }
+    }
+
+    private String nameForAnimal() {
+        System.out.println("Please give him a name: ");
         Scanner scanner = new Scanner(System.in);
-
-
+        String animalName = scanner.nextLine();
+        return animalName;
     }
 
     private void initFood() {
@@ -82,13 +138,9 @@ public class Game {
 
     public void displayFood() {
         System.out.println("Available Food: ");
-//        for (Food food: foodList){
-//            food.getName();
-//            food.getQuantity();
-//        }
         for (int i = 0; i < foods.length; i++) {
             if (foods[i] != null) {
-                System.out.println((i + 1) + "." + foods[i].getName() + "-" + foods[i].getQuantity());
+                System.out.println((i + 1) + "." + foods[i].getName() + "-" + foods[i].getQuantity() + " grams.");
             }
         }
     }
@@ -98,7 +150,7 @@ public class Game {
         System.out.println("Available Activities: ");
         for (int i = 0; i < activities.length; i++) {
             if (activities[i] != null) {
-                System.out.println((i + 1) + "." + activities[i].getName() + "-" + activities[i].getDurationInHours());
+                System.out.println((i + 1) + "." + activities[i].getName() + "-" + activities[i].getDurationInHours() + " hours together.");
             }
         }
     }
@@ -122,12 +174,13 @@ public class Game {
         int activitiesNumber = scanner.nextInt();
         return activities[activitiesNumber - 1];
     }
-    private void initializePlayers(){
+
+    private void initializePlayers() {
         int playerCount = getPlayerCountFromUser();
-        for ( int i = 0; i < playerCount ; i++){
-            System.out.println("That`s one adopter for an animal: " + (i+1));
+        for (int i = 0; i < playerCount; i++) {
+            System.out.println("That`s one adopter for an animal: " + (i + 1));
             String name = getUserName();
-            Adopter adopter = new Adopter(name,1655.5);
+            Adopter adopter = new Adopter(name, 1655.5);
             adopter.setName(name);
             adopter.getGender();
             adopter.isJob();
@@ -136,10 +189,23 @@ public class Game {
             users.add(adopter);
         }
     }
+
     private String getUserName() {
         System.out.println("Please enter your name: ");
         Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
+        try {
+            String userName = scanner.nextLine();
+            return scanner.nextLine();
+        } catch (InputMismatchException e) {
+            System.out.println("You have entered an invalid value.Please try again.");
+            return getUserName();
+        }
     }
+
+    private void requireFeeding() {
+        System.out.println("Please feed your pet: ");
+        Scanner scanner = new Scanner(System.in);
+
     }
+}
 
