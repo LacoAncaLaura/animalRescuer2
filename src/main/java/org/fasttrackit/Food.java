@@ -4,7 +4,7 @@ package org.fasttrackit;
 
 import java.util.Date;
 
-public class Food<F> {
+public class Food {
 
     // instance variables
     private String name;

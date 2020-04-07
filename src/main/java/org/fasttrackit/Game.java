@@ -1,5 +1,6 @@
 package org.fasttrackit;
 
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -16,7 +17,12 @@ public class Game {
     private Animal[] abandonedAnimals = new Animal[2];
     private List<Adopter> users = new ArrayList<>();
     private Food[] foods = new Food[3];
+    private Activity[] activities = new Activity[4];
     private Animal selectedAnimal;
+    private Activity selectedActivities;
+    private Food selectedFood;
+    private boolean winnerNotKnown = true;
+    private int usersWithoutMoney = 0;
 
 
     public void start() {
@@ -33,12 +39,37 @@ public class Game {
         initFood();
         displayFood();
         Food selectedFood = getSelectedFoodFromUser();
+        System.out.println("Your pet is having for meal: " + selectedFood);
+        requireFeeding();
+        requireActivity();
+
 
         initActivity();
         displayActivities();
         Activity selectedActivities = getSelectedActivityFromUser();
+        System.out.println("Now take your pet and exercise some " + selectedActivities);
+        while (winnerNotKnown && usersWithoutMoney < users.size()) {
+            playGame();
+        }
 
     }
+
+    private void playGame() {
+        System.out.println("\n2New Round");
+        int feeding = animal.getHungerLevel();
+        for (int i = 0; i < feeding; i++) {
+            System.out.println("It`s " + adopter.getName() + "turn");
+            if (animal.getHungerLevel() > animal.getMoodLevel() && adopter.getMoney() < selectedFood.getPrice()) {
+                System.out.println("The winner is: " + adopter.getName());
+                winnerNotKnown = false;
+
+                break;
+            }
+            if (animal.getHealthLevel() > 8) ;
+            usersWithoutMoney++;
+        }
+    }
+
 
     private void initAnimal() {
         System.out.println("Please select an animal: ");
@@ -98,6 +129,7 @@ public class Game {
         Food food1 = new Food("TasteOfTheWild");
 //        foodList.add(1,food1);
         food1.setQuantity(150);
+        food1.setPrice(25.1);
 //
         foods[0] = food1;
 //       Index
@@ -105,6 +137,7 @@ public class Game {
         Food food2 = new Food("Beef");
 //        foodList.add(2, food2);
         food2.setQuantity(200);
+        food2.setPrice(5.3);
 
 
         foods[1] = food2;
@@ -112,11 +145,10 @@ public class Game {
         Food food3 = new Food("Chicken");
 //        foodList.add(3, food3);
         food3.setQuantity(250);
+        food3.setPrice(2.5);
 
         foods[2] = food3;
     }
-
-    private Activity[] activities = new Activity[4];
 
     private void initActivity() {
 
@@ -140,7 +172,7 @@ public class Game {
         System.out.println("Available Food: ");
         for (int i = 0; i < foods.length; i++) {
             if (foods[i] != null) {
-                System.out.println((i + 1) + "." + foods[i].getName() + "-" + foods[i].getQuantity() + " grams.");
+                System.out.println((i + 1) + "." + foods[i].getName() + "-" + foods[i].getQuantity() + " grams and you will pay: " + foods[i].getPrice() + " Ron");
             }
         }
     }
@@ -195,18 +227,46 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         try {
             String userName = scanner.nextLine();
-            return scanner.nextLine();
-        } catch (InputMismatchException e) {
+            return userName;
+        } catch (Exception e) {
             System.out.println("You have entered an invalid value.Please try again.");
-            return getUserName();
+            String userName = scanner.nextLine();
+            return userName;
         }
     }
 
     private void requireFeeding() {
-        System.out.println("Please feed your pet: ");
+        System.out.println("Meal time!" +
+                "Now feed your pet.");
         Scanner scanner = new Scanner(System.in);
+//        displayFood();
+        int feeding = scanner.nextInt();
+        for (int i = feeding; i <= 10; i++) {
+            System.out.println("Great job!");
+//            if (animal.getMoodLevel() > 10)
+//                System.out.println("Now your pet is happy!");
+        }
+    }
 
+    private void requireActivity() {
+        System.out.println("Have some fun! Pick again your favorite activity");
+        displayActivities();
+        Scanner scanner = new Scanner(System.in);
+        int play = scanner.nextInt();
+        for (int i = play; i < 8; i++) {
+            System.out.println("i hope you had a good time together!");
+        }
     }
 }
+//    private void requireDoctor(){
+//        System.out.println("Let`s have a check of your pet`s health");
+//        Scanner scanner = new Scanner(System.in);
+//        int
+
+
+
+
+
+
 
 
