@@ -39,15 +39,20 @@ public class Game {
         initFood();
         displayFood();
         Food selectedFood = getSelectedFoodFromUser();
-        System.out.println("Your pet is having for meal: " + selectedFood);
+        System.out.println("Your pet is having for meal: " + selectedFood.getName());
         requireFeeding();
-        requireActivity();
+
+
+
+
 
 
         initActivity();
         displayActivities();
         Activity selectedActivities = getSelectedActivityFromUser();
         System.out.println("Now take your pet and exercise some " + selectedActivities);
+        requireActivity();
+
         while (winnerNotKnown && usersWithoutMoney < users.size()) {
             playGame();
         }
@@ -64,28 +69,28 @@ public class Game {
                 winnerNotKnown = false;
 
                 break;
-            }
-            if (animal.getHealthLevel() > 8) ;
+            }if (animal.getHealthLevel() > 8){
             usersWithoutMoney++;
+            }
         }
     }
 
 
     private void initAnimal() {
         System.out.println("Please select an animal: ");
-        Animal abandonedAnimal1 = new Cat("Cat", 5, 10, 2);
+        Animal abandonedAnimal1 = new Cat("Kitty", 5, 10, 2);
         abandonedAnimal1.setName("Cat");
-        abandonedAnimal1.setHungerLevel(10);
-        abandonedAnimal1.setHealthLevel(5);
-        abandonedAnimal1.setMoodLevel(2);
+        abandonedAnimal1.setHungerLevel(8);
+        abandonedAnimal1.setHealthLevel(3);
+        abandonedAnimal1.setMoodLevel(3);
 
         abandonedAnimals[0] = abandonedAnimal1;
 
-        Animal abandonedAnimal2 = new Dog("Dog", 5, 10, 2, 1);
+        Animal abandonedAnimal2 = new Dog("Lucky", 5, 10, 2, 1);
         abandonedAnimal2.setName("Dog");
-        abandonedAnimal2.setHealthLevel(5);
-        abandonedAnimal2.setHungerLevel(10);
-        abandonedAnimal2.setMoodLevel(2);
+        abandonedAnimal2.setHealthLevel(4);
+        abandonedAnimal2.setHungerLevel(9);
+        abandonedAnimal2.setMoodLevel(3);
 
         abandonedAnimals[1] = abandonedAnimal2;
 
@@ -107,7 +112,7 @@ public class Game {
         try {
             Scanner scanner = new Scanner(System.in);
             int abandonedAnimalsNumber = scanner.nextInt();
-            return abandonedAnimals[abandonedAnimalsNumber];
+            return abandonedAnimals[abandonedAnimalsNumber -1 ];
         } catch (InputMismatchException e) {
             throw new RuntimeException("You have entered an invalid value.Please try again.");
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -211,7 +216,7 @@ public class Game {
         int playerCount = getPlayerCountFromUser();
         for (int i = 0; i < playerCount; i++) {
             System.out.println("That`s one adopter for an animal: " + (i + 1));
-            String name = getUserName();
+           String name = getUserName();
             Adopter adopter = new Adopter(name, 1655.5);
             adopter.setName(name);
             adopter.getGender();
@@ -235,6 +240,7 @@ public class Game {
         }
     }
 
+
     private void requireFeeding() {
         System.out.println("Meal time!" +
                 "Now feed your pet.");
@@ -250,7 +256,7 @@ public class Game {
 
     private void requireActivity() {
         System.out.println("Have some fun! Pick again your favorite activity");
-        displayActivities();
+//        displayActivities();
         Scanner scanner = new Scanner(System.in);
         int play = scanner.nextInt();
         for (int i = play; i < 8; i++) {

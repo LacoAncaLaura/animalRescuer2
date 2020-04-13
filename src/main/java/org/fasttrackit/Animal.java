@@ -23,8 +23,8 @@ public class Animal  {
     public Animal(){
         totalAnimalCount++;
     }
-    public Animal(String name, int healthLevel, int hungerLevel, int moodLevel) {
-        this.name = name;
+    public Animal(String nameAnimal, int healthLevel, int hungerLevel, int moodLevel) {
+        this.name = nameAnimal;
         this.healthLevel = healthLevel;
         this.hungerLevel = hungerLevel;
         this.moodLevel = moodLevel;
